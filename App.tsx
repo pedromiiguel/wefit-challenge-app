@@ -1,10 +1,10 @@
 import { config } from '@gluestack-ui/config';
-import { GluestackUIProvider, Heading, Text } from '@gluestack-ui/themed';
+import { GluestackUIProvider } from '@gluestack-ui/themed';
+import { Routes } from './src/routes/routes';
 export default function App() {
   return (
     <GluestackUIProvider config={config}>
-      <Heading>I am a Heading</Heading>
-      <Text>Hello World!</Text>
+      <Routes />
     </GluestackUIProvider>
   );
 }
