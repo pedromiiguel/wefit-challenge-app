@@ -1,6 +1,43 @@
 module.exports = {
   extends: ['expo', 'prettier'],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'import'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'import/order': [
+          'error',
+          {
+            groups: ['external', 'builtin', 'internal', 'parent', 'sibling'],
+            pathGroups: [
+              {
+                pattern: 'react+(|-native)',
+                group: 'external',
+                position: 'before',
+              },
+              {
+                pattern:
+                  '@+(routes|screens|components|hooks|services|types|assets)',
+                group: 'internal',
+                position: 'before',
+              },
+              {
+                pattern: './',
+                group: 'internal',
+                position: 'before',
+              },
+            ],
+            pathGroupsExcludedImportTypes: ['react+(|-native)'],
+            alphabetize: {
+              order: 'asc',
+              caseInsensitive: true,
+            },
+            'newlines-between': 'always',
+          },
+        ],
+      },
+    },
+  ],
   rules: {
     'prettier/prettier': 'error',
   },
