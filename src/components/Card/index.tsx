@@ -25,11 +25,7 @@ export function Card({ repository, showFavoriteButton }: CardProps) {
 
   function navigateToDetailsScreen() {
     navigate('DetailsScreen', {
-      id: repository.id,
-      description: repository.description,
-      fullName: repository.fullName,
-      htmlUrl: repository.htmlUrl,
-      language: repository.language,
+      repository,
     });
   }
 
