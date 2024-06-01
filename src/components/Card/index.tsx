@@ -31,14 +31,22 @@ export function Card({ repository, showFavoriteButton }: CardProps) {
 
   return (
     <Pressable onPress={navigateToDetailsScreen}>
-      <Box p="$4" bg="$white" borderRadius={4} elevation={4}>
+      <Box
+        p="$4"
+        bg="$white"
+        borderRadius={4}
+        elevation={4}
+        shadowColor="#000"
+        shadowOffset={{ width: 0, height: 1 }}
+        shadowOpacity={0.22}
+        shadowRadius={2.22}>
         <Box
           flexDirection="row"
           alignItems="center"
           justifyContent="space-between">
           <Text size="md" color="#070707">
             {creator}/
-            <Text size="md" color="#070707" bold>
+            <Text size="md" fontFamily="$bold" color="#070707">
               {name}
             </Text>
           </Text>
