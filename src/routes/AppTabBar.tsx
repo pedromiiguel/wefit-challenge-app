@@ -18,7 +18,11 @@ export function AppTabBar({
 
   return (
     <Box
-      elevation={3}
+      elevation={5}
+      shadowColor="#000"
+      shadowOffset={{ width: 0, height: 1 }}
+      shadowOpacity={0.22}
+      shadowRadius={2.22}
       flexDirection="row"
       paddingTop={10}
       backgroundColor="#FFFFFF"
