@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@expo-google-fonts/inter": "^0.2.3",
     "@gluestack-style/react": "^1.0.56",
     "@gluestack-ui/config": "^1.1.18",
     "@gluestack-ui/themed": "^1.1.26",
@@ -21,6 +22,8 @@
     "@tanstack/react-query": "^5.40.0",
     "axios": "^1.7.2",
     "expo": "~51.0.9",
+    "expo-font": "~12.0.6",
+    "expo-splash-screen": "~0.27.4",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-native": "0.74.1",
