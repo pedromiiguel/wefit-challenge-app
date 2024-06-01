@@ -2,17 +2,14 @@ import { NavigatorScreenParams } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { DetailsScreen, WebViewScreen } from '@screens';
+import { GithubRepository } from '@services';
 
 import { AppTabBottomTabParamList, TabRoutes } from './tab.routes';
 
 export type AppStackParamList = {
   AppTabNavigator: NavigatorScreenParams<AppTabBottomTabParamList>;
   DetailsScreen: {
-    id: number;
-    fullName: string;
-    description: string;
-    htmlUrl: string;
-    language: string;
+    repository: GithubRepository;
   };
   WebViewScreen: {
     url: string;
