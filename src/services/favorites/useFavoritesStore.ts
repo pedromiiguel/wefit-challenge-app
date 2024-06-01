@@ -37,5 +37,11 @@ export function useFavorites() {
   );
   const favorites = useFavoritesStore(state => state.items);
 
-  return { addToFavorites, removeFromFavorites, favorites };
+  const isInFavorites = (id: number) => {
+    const item = favorites.find(item => item.id === id);
+
+    return !!item;
+  };
+
+  return { addToFavorites, removeFromFavorites, favorites, isInFavorites };
 }
