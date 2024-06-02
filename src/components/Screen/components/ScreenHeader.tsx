@@ -53,7 +53,6 @@ export function ScreenHeader({
   const handlePresentModalPress = useCallback(() => {
     bottomSheetModalRef.current?.present();
   }, []);
-  const handleSheetChanges = useCallback((index: number) => {}, []);
 
   const handleCloseModal = useCallback(() => {
     bottomSheetModalRef.current?.dismiss();
@@ -115,20 +114,30 @@ export function ScreenHeader({
             enableTouchThrough={true}
             opacity={0.5}
           />
-        )}
-        onChange={handleSheetChanges}>
+        )}>
         <BottomSheetView style={{ flex: 1 }}>
           <Box px="$4">
             <Text color="#212121" mt="$4">
               Alterar usuário selecionado
             </Text>
-            <BottomSheetTextInput
-              autoCapitalize="none"
-              placeholderTextColor="#606060"
-              placeholder="Nome de usuário"
-              onChangeText={setUser}
-              style={styles.input}
-            />
+            <Box position="relative" mt="$3">
+              <Text
+                size="xs"
+                position="absolute"
+                color="#606060"
+                top="$2"
+                left="$3"
+                zIndex={1}>
+                Nome do usuário
+              </Text>
+
+              <BottomSheetTextInput
+                autoCapitalize="none"
+                placeholderTextColor="#606060"
+                onChangeText={setUser}
+                style={styles.input}
+              />
+            </Box>
             <Box flexDirection="row" mt="$3" alignItems="center" w="$full">
               <Button
                 py="$2"
@@ -154,7 +163,6 @@ export function ScreenHeader({
 
 const styles = StyleSheet.create({
   input: {
-    marginTop: 8,
     marginBottom: 10,
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
@@ -162,6 +170,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#8B8B8B',
     color: '#000000',
     padding: 12,
+    paddingTop: 24,
     fontSize: 16,
     fontFamily: 'Inter_400Regular',
     lineHeight: 20,
