@@ -14,7 +14,7 @@ export interface ScreenProps {
   title?: string;
   scrollable?: boolean;
   canGoBack?: boolean;
-  rightIcon?: React.ReactNode;
+  showRightIcon?: React.ReactNode;
   noPaddingHorizontal?: boolean;
   variant?: 'light' | 'dark';
 }
@@ -24,7 +24,7 @@ export function Screen({
   title,
   scrollable = false,
   canGoBack,
-  rightIcon,
+  showRightIcon,
   noPaddingHorizontal = false,
   variant = 'light',
 }: ScreenProps) {
@@ -38,7 +38,7 @@ export function Screen({
         <ScreenHeader
           title={title}
           canGoBack={canGoBack}
-          rightIcon={rightIcon}
+          showRightIcon={showRightIcon}
           variant={variant}
         />
 
