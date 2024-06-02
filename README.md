@@ -25,7 +25,7 @@
 
 ## 🚀 Tecnologias
 
-Tecnologias utilizazadas no projeto:
+Tecnologias utilizadas no projeto:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Expo](https://expo.dev/)
