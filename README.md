@@ -47,6 +47,7 @@ Tecnologias utilizazadas no projeto:
 <p>E também possuir um gerenciador de tarefas NPM ou Yarn.</p>
 
 
+
 ## 🔧 Como executar o projeto
 
 ```bash
@@ -55,6 +56,9 @@ $ git clone https://github.com/pedromiiguel/wefit-challenge-app
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd wefit-challenge-app
+
+# Adicionar a variável EXPO_PUBLIC_BASE_URL ao arquivo .env, definindo-a com o mesmo valor que está no arquivo .env.example
+$ echo 'EXPO_PUBLIC_BASE_URL="https://api.github.com/"' >> .env
 
 # Instale as dependências
 $ npm install ou yarn
