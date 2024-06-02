@@ -20,12 +20,16 @@ export function EmptyList({
     return null;
   }
 
-  let component = <Text fontWeight={'$semibold'}>{emptyMessage}</Text>;
+  let component = (
+    <Text fontFamily="$semibold" fontWeight={'$semibold'}>
+      {emptyMessage}
+    </Text>
+  );
 
   if (error) {
     component = (
       <Box gap="$4">
-        <Text fontWeight={'$semibold'} color="$red10">
+        <Text fontFamily="$semibold" fontWeight={'$semibold'} color="$red10">
           {errorMessage}
         </Text>
 
