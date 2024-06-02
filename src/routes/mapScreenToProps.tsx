@@ -11,7 +11,7 @@ export const mapScreenToProps: Record<
   }
 > = {
   RepositoriesScreen: {
-    label: 'Repositorios',
+    label: 'Repositórios',
     icon: color => <AntDesign name="github" size={24} color={color} />,
   },
   FavoritesScreen: {
