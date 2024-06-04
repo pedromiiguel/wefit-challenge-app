@@ -14,7 +14,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import config from './gluestack.config';
+import config from './Gluestack.config';
 import { Routes } from './src/routes/routes';
 
 const queryClient = new QueryClient();
